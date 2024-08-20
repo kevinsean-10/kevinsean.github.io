@@ -43,13 +43,13 @@
 	// Nav.
 
 		// Title Bar.
-			$(
-				'<div id="titleBar">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
-				'</div>'
-			)
-				.appendTo($body);
+			// $(
+			// 	'<div id="titleBar">' +
+			// 		'<a href="#navPanel" class="toggle"></a>' +
+			// 		'<span class="title">' + $('#logo').html() + '</span>' +
+			// 	'</div>'
+			// )
+			// 	.appendTo($body);
 
 		// Panel.
 			$(
@@ -97,14 +97,10 @@
 						$this
 							.css('background-position', 'center 0px');
 
-						$window
-							.on('scroll._parallax', function() {
-
-								var pos = parseInt($window.scrollTop()) - parseInt($this.position().top);
-
-								$this.css('background-position', 'center ' + (pos * -0.15) + 'px');
-
-							});
+						$window[0].addEventListener('scroll', function() {
+							var pos = parseInt($window.scrollTop()) - parseInt($this.position().top);
+							$this.css('background-position', 'center ' + (pos * -0.15) + 'px');
+						}, { passive: true });
 
 					};
 
@@ -246,5 +242,93 @@
 
 		$banner
 			._parallax();
+
+	//btnMore
+	// document.getElementById("btnMore").addEventListener("click", function(event) {
+	// 	event.preventDefault(); // Prevents the default action of the link
+
+	// 	// var container3 = document.getElementById("three");
+	// 	// container3.style.height = "1100pt";
+
+	// 	var divShow = document.getElementById("info2");
+	// 	divShow.style.display="block";
+
+	// 	var divShow = document.getElementById("info3");
+	// 	divShow.style.display="block";
+
+	// 	var showbtn = document.getElementById("btnMoreShow");
+	// 	var hidebtn = document.getElementById("btnMore");
+
+	// 	hidebtn.parentElement.parentElement.style.display = "none"; // Hide the current <ul>
+	// 	showbtn.parentElement.parentElement.style.display = "block"; // Show the hidden <ul>
+	// });
+	// document.getElementById("btnMoreShow").addEventListener("click", function(event){
+	// 	event.preventDefault();
+
+	// 	// var container3 = document.getElementById("three");
+	// 	// container3.style.height = "700pt";
+
+	// 	var divShow = document.getElementById("info2");
+	// 	divShow.style.display="none";
+
+	// 	var divShow = document.getElementById("info3");
+	// 	divShow.style.display="none";
+
+	// 	var showbtn = document.getElementById("btnMoreShow");
+	// 	var hidebtn = document.getElementById("btnMore");
+
+	// 	hidebtn.parentElement.parentElement.style.display = "block"; // Hide the current <ul>
+	// 	showbtn.parentElement.parentElement.style.display = "none"; // Show the hidden <ul>
+
+
+	// 	var target = document.getElementById("three");
+	// 	target.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the target element
+		
+	// });
+	// document.addEventListener('DOMContentLoaded', function() {
+	// 	document.querySelectorAll('.experience').forEach(function(experience) {
+	// 		experience.addEventListener('mouseenter', function() {
+	// 			const imageSrc = this.getAttribute('data-image');
+	// 			document.getElementById('company-image').setAttribute('src', imageSrc);
+	// 		});
+	
+	// 		experience.addEventListener('mouseleave', function() {
+	// 			document.getElementById('company-image').setAttribute('src', 'images/pic04.jpg');
+	// 		});
+	// 	});
+	// });
+
+	document.addEventListener('DOMContentLoaded', () => {
+		// Get the section element
+		const spotlightSection = document.querySelector('#three');
+		const companyImage = spotlightSection.querySelector('#company-image');
+	
+		// Add click event listeners to all experience items
+		document.querySelectorAll('.experience').forEach(experience => {
+			experience.addEventListener('click', function() {
+				// Get the data-image attribute value
+				const newImageUrl = this.getAttribute('data-image');
+				
+				// Update the background-image of the section
+				if (spotlightSection) {
+					spotlightSection.style.backgroundImage = `url(${newImageUrl})`;
+				}
+				
+				// Update the src of the company image
+				if (companyImage) {
+					companyImage.src = newImageUrl;
+				}
+			});
+		});
+	});
+	
+	
+	// document.getElementById('company-image').src = 'images/sinarmasland.jpg';
+
+	// document.getElementById('company-image').style.backgroundColor = 'rgba(255, 0, 0, 0.5)'; // Add a semi-transparent red background
+
+
+
+	
 
 })(jQuery);

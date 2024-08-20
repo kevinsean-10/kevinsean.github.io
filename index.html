@@ -11,15 +11,49 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Favicon -->
+		<link rel="icon" href="images/selflogo.png" type="image/png" />
+		<!-- <style>
+			.logo {
+				width: 100px; /* Adjust the size as needed */
+				height: auto; /* Maintain aspect ratio */
+				display: block;
+				margin: 0 auto; /* Center the logo */
+			}
+			.work-experiences .experience {
+				margin-bottom: 100px; /* Adjust the value as needed */
+			}
+			.experience {
+				border: 2px solid #3cc48c; /* Light grey border */
+				border-radius: 8px; /* Rounded corners */
+				padding: 10px; /* Space inside the box */
+				margin-bottom: 20px; /* Space between boxes */
+				background-color: #3cc48c; /* Light background color */
+			}
+			.company-name {
+				color: #000000; /* Green color */
+				font-weight: bold;
+			}
+			.duration {
+				font-size: 0.9em;
+				color: #013492;
+				margin-bottom: 5px;
+			}
+			.location{
+				font-size: 0.9em;
+				color: #013492;
+				margin-bottom: 20px;
+			}
+		</style> -->
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header">
+				<!-- <header id="header"> -->
 					<!-- <h1 id="logo"><a href="index.html">Landed</a></h1> -->
-					<nav id="nav">
-						<ul>
+					<!-- <nav id="nav"> -->
+						<!-- <ul> -->
 							<!-- <li><a href="index.html">Home</a></li> -->
 							<!-- <li>
 								<a href="#">|||</a>
@@ -40,9 +74,9 @@
 							</li> -->
 							<!-- <li><a href="elements.html">Elements</a></li> -->
 							<!-- <li><a href="#" class="button primary">Sign Up</a></li> -->
-						</ul>
-					</nav>
-				</header>
+						<!-- </ul> -->
+					<!-- </nav> -->
+				<!-- </header> -->
 
 			<!-- Banner -->
 				<section id="banner">
@@ -59,21 +93,22 @@
 
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+					<span class="image fit main"><img src="images/Profile.jpg" alt="" /></span>
 					<div class="content">
 						<div class="container">
 							<div class="row">
 								<div class="col-4 col-12-medium">
 									<header>
 										<h2>About</h2>
-										<p>A firm believer that the fusion of data science and powerful communication is the lifeline for sustaining societies in the ever-evolving era of automation. </p>
+										<p>An unwavering advocate for the belief that the convergence of data science and compelling communication is the vital force sustaining societies amid the relentless tide of automation's evolution. </p>
 									</header>
 								</div>
 								<div class="col-4 col-12-medium">
-									<p>Driven by ambition and a constant desire to learn and explore new ideas.</p>
+									<p>Driven by ambition and a constant desire to learn and explore new ideas. 
+										He sees himself as a relentless seeker of ambition, ever eager to embrace new knowledge both within his field and beyond, navigating the vast realms of his personal and professional life with unyielding curiosity. He is also a fervent tech enthusiast, driven by a passion for the latest innovations.</p>
 								</div>
 								<div class="col-4 col-12-medium">
-									<p>Driven by ambition and a constant desire to learn and explore new ideas.</p>
+									<p>Though he may not yet be the foremost expert in his field, he is driven by dreams of pushing boundaries and welcoming progress, all while remaining unwavering in his values. His journey is fueled by a deep-seated dedication to advancing his nation's future.</p>
 								</div>
 							</div>
 						</div>
@@ -83,7 +118,7 @@
 
 			<!-- Two -->
 				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+					<span class="image fit main"><img src="images/cvmockup.png" alt="" /></span>
 					<div class="content">
 						<header>
 							<h2>Curriculum Vitae</h2>
@@ -91,7 +126,7 @@
 						</header>
 						<!-- <p></p> -->
 						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
+							<li><a href="https://drive.google.com/file/d/13dVjpRqKQShtOh2xCwcE1aE6aE2XLku2/view?usp=sharing" class="button" target="_blank">Learn More</a></li>
 						</ul>
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
@@ -99,42 +134,50 @@
 
 			<!-- Three -->
 				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
-					<div class="content">
+					<span class="image fit main">
+						<img id="company-image" src="images/pic04.jpg" alt="" />
+					</span>
+					<div class="content scroll-container">
 						<header>
 							<h2>Work Experiences</h2>
 						</header>
-						<div class="work-experiences">
-							<div class="experience">
-								<h3>Sinarmas Land</h3>
-								<p><em>Business Intelligence Intern</em></p>
-								<p class="duration">July 2024 - December 2024</p>
-								<p>South Tangerang, Banten, Indonesia</p>
-								<p>[Description]</p>
+						<div class="work-experiences scroll-content">
+							<div class="experience" data-image="images/sinarmasland.jpg">
+								<h3 class="company-name">Sinarmas Land</h3>
+								<p class="position">Business Intelligence Intern</p>
+								<p class="duration">July 2024 - Current</p>
+								<p class="location">South Tangerang, Banten, Indonesia</p>
+								<hr class="separator">
+								<p class="description">
+									Collected market data to understand trends and preferences. Analyzed this data to identify patterns, evaluate conditions, and understand customer needs.
+								</p>
 							</div>
-							<div class="experience">
-								<h3>PT. Bhinneka Sangkuriang Transport</h3>
-								<p><em>Data Analyst Intern</em></p>
+							<div id="info2" class="experience" data-image="images/bhinneka.jpg">
+								<h3 class="company-name">PT. Bhinneka Sangkuriang Transport</h3>
+								<p class="position">Data Analyst Intern</p>
 								<p class="duration">September 2023 - December 2023</p>
-								<p>Bandung, West Java, Indonesia</p>
-								<p>[Description]</p>
+								<p class="location">Bandung, West Java, Indonesia</p>
+								<hr class="separator">
+								<p class="description">
+									Researched shuttle scheduling optimization, analyzed historical data and departure patterns, and calculated load factors. Developed a dashboard to visualize patterns and derive business insights.
+								</p>
 							</div>
-							<div class="experience">
-								<h3>Astra International</h3>
-								<p><em>Data Intelligence Intern</em></p>
+							<div id="info3" class="experience" data-image="images/astra.jpg">
+								<h3 class="company-name">Astra International</h3>
+								<p class="position">Data Intelligence Intern</p>
 								<p class="duration">July 2023 - September 2023</p>
-								<p>North Jakarta, Jakarta, Indonesia</p>
-								<p>[Description]</p>
+								<p class="location">North Jakarta, Jakarta, Indonesia</p>
+								<hr class="separator">
+								<p class="description">
+									Completed in-class training in Data Intelligence, focusing on SQL, Python, PowerBI, web scraping with Selenium, JSON, and FastAPI. Extracted and processed data from PostgreSQL using Python, then applied machine learning and cross-validation for optimal predictions.
+								</p>
 							</div>
 						</div>
-						
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
 					</div>
 					<a href="#four" class="goto-next scrolly">Next</a>
 				</section>
 
+				
 			<!-- Four -->
 				<section id="four" class="wrapper style1 special fade-up">
 					<div class="container">
@@ -144,21 +187,43 @@
 						<div class="box alt">
 							<div class="row gtr-uniform">
 								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-chart-area"></span>
-									<h3>Ipsum sed commodo</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+									<a href="https://drive.google.com/file/d/11LcJWAngD0SsNd3847uBkQqeWSH4nf1G/view" target="_blank">
+										<img src="images/project-TSDN.png" class="rounded-image" alt="Predicting Environmental Quality">
+									</a>
+									<h3>Stock Price Prediction Website Using Machine Learning and Math</h3>
+									<div class="languages">
+										<span>Python</span>
+									</div>
+									<p>
+										Developed a model using technical and fundamental analysis, including regression for short-term predictions, machine learning for long-term forecasts, and a user-friendly website.
+									</p>
+									
 								</section>
 								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-comment"></span>
-									<h3>Eleifend lorem ornare</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+									<a href="https://drive.google.com/file/d/1Srz9dR2vQEXP3-2Si_RTpY5lbvLad07A/view" target="_blank">
+										<img src="images/project-jabar.png" class="rounded-image" alt="Stock Prediction Image">
+									</a>
+									<h3>Mathematical Approach for Predicting Environmental Quality in West Java</h3>
+									<div class="languages">
+										<span>Python</span>
+									</div>
+									<p>
+										Analyzed environmental index data by processing annual data (2011-2021) for West Java and predicting the 2022 index using curve fitting and extrapolation.
+									</p>									
 								</section>
 								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-flask"></span>
-									<h3>Cubilia cep lobortis</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+									<a href="https://drive.google.com/file/d/1IXLDd2aRCWCSR1UrmEK3w_FIb2_1-rqi/view" target="_blank">
+										<img src="images/project-goldore.png" class="rounded-image" alt="Gold Ore Modeling">
+									</a>
+									<h3>Spatial analysis for Gold Ore Modeling in West Java and Banten</h3>
+									<div class="languages">
+										<span>R</span>
+									</div>
+									<p>
+										Analyzed the impact of outliers on gold ore data by processing spatial properties and value, predicting content with ordinary kriging, and interpreting correlations with gold commodity values.
+									</p>									
 								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
+								<!-- <section class="col-4 col-6-medium col-12-xsmall">
 									<span class="icon solid alt major fa-paper-plane"></span>
 									<h3>Non semper interdum</h3>
 									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
@@ -172,7 +237,7 @@
 									<span class="icon solid alt major fa-lock"></span>
 									<h3>Massa arcu accumsan</h3>
 									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
+								</section> -->
 							</div>
 						</div>
 						<!-- <footer class="major">
@@ -204,6 +269,7 @@
 					<ul class="icons">
 						<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li> -->
 						<!-- <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+						<h2>Contact me on</h2>
 						<li><a href="https://www.linkedin.com/in/kevin-sean/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 						<li><a href="https://www.instagram.com/kevinsean_/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 						<li><a href="https://github.com/kevinsean-10" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
