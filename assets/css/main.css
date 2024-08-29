@@ -4289,3 +4289,25 @@ input, select, textarea {
 	.contact-link span {
 		cursor: default; /* Prevents action on click for email */
 	}
+	/* Styling for the repo-link-button similar to the languages class */
+	.repo-link-button {
+		margin-top: 0.5em; /* Space above the button */
+		margin-bottom: 1em; /* Space below the button */
+		display: inline-block;
+		background-color: #1c1d26; /* Background color */
+		border: 1px solid #e44c65; /* Border color */
+		border-radius: 4px; /* Rounded corners */
+		padding: 0.5em 1em; /* Padding around the text */
+	}
+
+	.repo-link-button a {
+		text-decoration: none; /* Remove underline */
+		color: #e44c65; /* Text color */
+		font-weight: bold; /* Make text bold */
+		display: inline-block; /* Ensure the link takes up only as much space as needed */
+	}
+
+	.repo-link-button a:hover {
+		background-color: #1c1d26; /* Change background on hover */
+		color: #000; /* Change text color on hover */
+	}
