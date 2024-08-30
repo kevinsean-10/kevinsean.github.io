@@ -300,11 +300,35 @@
 
 	document.addEventListener('DOMContentLoaded', () => {
 		// Get the section element
-		const spotlightSection = document.querySelector('#three');
+		const spotlightSection = document.querySelector('#WX');
 		const companyImage = spotlightSection.querySelector('#company-image');
 	
 		// Add click event listeners to all experience items
 		document.querySelectorAll('.experience').forEach(experience => {
+			experience.addEventListener('click', function() {
+				// Get the data-image attribute value
+				const newImageUrl = this.getAttribute('data-image');
+				
+				// Update the background-image of the section
+				if (spotlightSection) {
+					spotlightSection.style.backgroundImage = `url(${newImageUrl})`;
+				}
+				
+				// Update the src of the company image
+				if (companyImage) {
+					companyImage.src = newImageUrl;
+				}
+			});
+		});
+	});
+
+	document.addEventListener('DOMContentLoaded', () => {
+		// Get the section element
+		const spotlightSection = document.querySelector('#ED');
+		const companyImage = spotlightSection.querySelector('#company-image');
+	
+		// Add click event listeners to all experience items
+		document.querySelectorAll('.education').forEach(experience => {
 			experience.addEventListener('click', function() {
 				// Get the data-image attribute value
 				const newImageUrl = this.getAttribute('data-image');

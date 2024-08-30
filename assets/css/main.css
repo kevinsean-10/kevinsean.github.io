@@ -3152,15 +3152,19 @@ input, select, textarea {
 		}
 
 		.spotlight.style1 .content {
-			border-color: #e44c65;
+			border-color: #a7001c;
 		}
 
 		.spotlight.style2 .content {
-			border-color: #5480f1;
+			border-color: #00b7c4;
 		}
 
 		.spotlight.style3 .content {
-			border-color: #39c088;
+			border-color: #a88648;
+		}
+
+		.spotlight.style4 .content {
+			border-color: #0022b8;
 		}
 
 		.spotlight.inactive .content {
@@ -4137,16 +4141,16 @@ input, select, textarea {
 	
 	.experience {
 		cursor: pointer;
-		border: 2px solid #3cc48c; 
+		border: 2px solid #ffffff; 
 		border-radius: 8px; 
 		padding: 10px; 
 		margin-bottom: 20px; 
-		background-color: #3cc48c; 
+		background-color: #b9b9b9; 
 		transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 	}
 
 	.experience:hover {
-		background-color: #00332d; /* New background color on hover */
+		background-color: #4e3f21; /* New background color on hover */
 	}
 
 	.experience:hover .company-name,
@@ -4310,4 +4314,75 @@ input, select, textarea {
 	.repo-link-button a:hover {
 		background-color: #1c1d26; /* Change background on hover */
 		color: #000; /* Change text color on hover */
+	}
+
+	.edu .education {
+		margin-bottom: 100px; 
+	}
+	
+	.education {
+		cursor: pointer;
+		border: 2px solid #ffffff; 
+		border-radius: 8px; 
+		padding: 10px; 
+		margin-bottom: 20px; 
+		background-color: #b9b9b9; 
+		transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+	}
+
+	.education:hover {
+		background-color: #000f50; /* New background color on hover */
+	}
+
+	.education:hover .institution-name,
+	.education:hover .degree,
+	.education:hover .duration,
+	.education:hover .location,
+	.education:hover .description {
+		color: #ffffff; /* Text color for all text inside .experience on hover */
+	}
+
+	.institution-name {
+		font-size: 1.5em;
+		color: #000000;
+		font-weight: 1000;
+		margin-bottom: 3px;
+	}
+
+	.degree{
+		font-size: 1.3em;
+		color: #000000;
+		margin-bottom: 20px;
+		font-style: italic;
+		font-weight: bolder;
+	}
+
+	.duration {
+		font-size: 0.9em;
+		color: #000000;
+		margin-bottom: 5px;
+		font-weight: bolder;
+	}
+
+	.location{
+		font-size: 0.9em;
+		color: #000000;
+		margin-bottom: 20px;
+		font-weight: bolder;
+	} 
+
+	.separator {
+		border: none; /* Removes default border */
+		border-top: 1px solid #000000; /* Custom color and thickness */
+		margin: 10px 0; /* Space above and below the line */
+		width: 100%; /* Full width */
+		opacity: 0.6; /* Slight transparency */
+		margin-bottom: 20px;
+	}
+
+	.description{
+		font-size: 0.8em;
+		color: #000000;
+		margin-bottom: 20px;
+		font-weight: 300;
 	}
